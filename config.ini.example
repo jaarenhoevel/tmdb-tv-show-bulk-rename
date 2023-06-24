@@ -1,0 +1,6 @@
+[TMDB]
+ApiKey=[TMDB-api-key]
+
+[Target Directories]
+BD=/home/user/Documents/Videos/BD
+DVD=/home/user/Documents/Videos/DVD
