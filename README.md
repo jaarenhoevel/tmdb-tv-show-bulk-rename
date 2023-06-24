@@ -13,7 +13,7 @@ Install the dependencies via pip:
 - configparser
 - argparse
 
-Copy configuration example to `~/.config/tmdb-movie-rename/config.ini`, add TMDB api key and edit directories if needed.
+Copy configuration example to `~/.config/tmdb-tv-show-bulk-rename/config.ini`, add TMDB api key and edit directories if needed.
 
 ## Usage:
-`python ./tmdb-movie-rename.py [tv-show-folder]`
+`python ./tmdb-tv-show-bulk-rename.py [tv-show-folder]`
