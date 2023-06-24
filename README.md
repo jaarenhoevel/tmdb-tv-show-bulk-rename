@@ -6,6 +6,8 @@ Simple script renaming whole TV-Show file directories optimized for Kodi library
 - Rename episode video files to "S(season)E(episode) - (episode name)"
 - Move episodes to folders named by seasons
 - Copy file structure to one of the specified library directories
+- Displays warnings when: Multiple files for same episode were found; Some files already exist in target directory; No matching episode was found on TMDB for given season and episode number in video filename
+- Overview how many episodes were found compared to episode count on TMDB
 
 ## Preperation:
 Install the dependencies via pip:
