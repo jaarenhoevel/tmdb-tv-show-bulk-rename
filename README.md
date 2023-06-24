@@ -9,11 +9,15 @@ Simple script renaming whole TV-Show file directories optimized for Kodi library
 - Displays warnings when: Multiple files for same episode were found; Some files already exist in target directory; No matching episode was found on TMDB for given season and episode number in video filename
 - Overview how many episodes were found compared to episode count on TMDB
 
+## Prerequisites for input directory:
+- Video files with the following extensions: `.mkv`, `.mp4`, `.avi`, `.m4v`. Any other file types will be ignored
+- Filename of each episode must contain season and episode number. Examples: `S01E08`, `s12e04`
+
 ## Preperation:
 Install the dependencies via pip:
-- tmdbsimple
-- configparser
-- argparse
+- `tmdbsimple`
+- `configparser`
+- `argparse`
 
 Copy configuration example to `~/.config/tmdb-tv-show-bulk-rename/config.ini`, add TMDB api key and edit directories if needed.
 
