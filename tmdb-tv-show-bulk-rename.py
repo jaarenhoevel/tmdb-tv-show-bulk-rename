@@ -116,7 +116,9 @@ for videoFile in videoFiles:
                 # Get movie file extension
                 fileExtension = os.path.splitext(videoFile)[1]
 
-                relativePath = f"S{season:02d}E{episode:02d} - {matchingEpisode['name'].replace('/',' ')}{fileExtension}"
+                title = re.sub(r'[^\w_. -]', '', matchingEpisode['name'])
+
+                relativePath = f"S{season:02d}E{episode:02d} - {title}{fileExtension}"
                 print(f'{seasons[season]["name"]}/{relativePath}')
 
                 renameList[videoFile] = {"filename": relativePath, "seasonDir": seasons[season]['name']}
