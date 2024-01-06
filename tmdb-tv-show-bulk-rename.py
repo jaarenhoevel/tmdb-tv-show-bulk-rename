@@ -25,8 +25,10 @@ def collectFiles(directory):
 
 
 def extract_season_episode(string):
+    filename = os.path.basename(string)
+
     pattern = r's(\d+)e(\d+)'
-    match = re.search(pattern, string, re.IGNORECASE)
+    match = re.search(pattern, filename, re.IGNORECASE)
     if match:
         season = int(match.group(1))
         episode = int(match.group(2))
