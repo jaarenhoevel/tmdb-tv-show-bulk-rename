@@ -139,7 +139,7 @@ print(f'\nSuccesfully allocated {allocatedEpisodes} out of {numberOfEpisodes} ep
 
 # Print target directories
 targetDirectories = []
-print("\n\nCopy TV-show to directory? [Skip and use current directory]")
+print("\n\nMove TV-show to directory? [Skip and use current directory]")
 for index, tDirectory in enumerate(config["Target Directories"]):
     print(f'{index + 1} - {tDirectory.upper()}')
     print(f'{bcolors.OKGREEN}{config["Target Directories"][tDirectory]}{bcolors.ENDC}\n')
@@ -158,7 +158,7 @@ except FileExistsError:
     print("Target directory already exists. Exiting...")
     exit()
 
-# Finally, copy video files
+# Finally, move video files
 for file, target in renameList.items():
     os.makedirs(f'{targetDirectory}/{showName}/{target["seasonDir"]}', exist_ok=True)
 
@@ -168,5 +168,5 @@ for file, target in renameList.items():
         print(f"Target file already exists: \n{file}\n\n")
         continue
 
-    print(f'Copying \n{file} \nto \n{finalPath}\n\n')
-    shutil.copy(file, finalPath)
+    print(f'Moving \n{file} \nto \n{finalPath}\n\n')
+    shutil.move(file, finalPath)
