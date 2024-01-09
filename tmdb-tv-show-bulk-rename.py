@@ -155,8 +155,11 @@ else:
 try:
     os.mkdir(f'{targetDirectory}/{showName}')
 except FileExistsError:
-    print("Target directory already exists. Exiting...")
-    exit()
+    print("Target directory already exists. Continue? [Y/n]")
+    confirm = input(">>> ")
+    if confirm == "n" or confirm == "N":
+        print("Exiting...")
+        exit()
 
 # Finally, move video files
 for file, target in renameList.items():
