@@ -13,7 +13,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def collectFiles(directory):
-    fileTypes = ['.mkv', '.mp4', '.avi', '.m4v']
+    fileTypes = ['.mkv', '.mp4', '.avi', '.m4v', '.webm']
     fileList = []
 
     for root, dirs, files in os.walk(directory):
